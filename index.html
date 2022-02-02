@@ -63,7 +63,9 @@
       <section class="hero section">
         <div class="container">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button class="hero-button" type="button">Заказать услугу</button>
+          <button data-modal-open class="hero-button" type="button">
+            Заказать услугу
+          </button>
         </div>
       </section>
       <section class="section">
@@ -128,28 +130,43 @@
           </h2>
           <ul class="list presentation-list">
             <li class="presentation-item">
-              <img
-                src="./images/img1.jpg"
-                alt="программист пишет код"
-                width="370"
-                height="294"
-              />
+              <div class="presentation-img-wraper">
+                <img
+                  src="./images/img1.jpg"
+                  alt="программист пишет код"
+                  width="370"
+                  height="294"
+                />
+                <div class="presentation-img-description">
+                  <p class="presentation-img-title">Десктопные приложения</p>
+                </div>
+              </div>
             </li>
             <li class="presentation-item">
-              <img
-                src="./images/img2.jpg"
-                alt="создание приложения для смартфона"
-                width="370"
-                height="294"
-              />
+              <div class="presentation-img-wraper">
+                <img
+                  src="./images/img2.jpg"
+                  alt="создание приложения для смартфона"
+                  width="370"
+                  height="294"
+                />
+                <div class="presentation-img-description">
+                  <p class="presentation-img-title">Мобильные приложения</p>
+                </div>
+              </div>
             </li>
             <li class="presentation-item">
-              <img
-                src="./images/img3.jpg"
-                alt="графический дизайн"
-                width="370"
-                height="294"
-              />
+              <div class="presentation-img-wraper">
+                <img
+                  src="./images/img3.jpg"
+                  alt="графический дизайн"
+                  width="370"
+                  height="294"
+                />
+                <div class="presentation-img-description">
+                  <p class="presentation-img-title">Дизайнерские решения</p>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
@@ -444,5 +461,15 @@
         </div>
       </div>
     </footer>
+    <div data-modal class="backdrop is-hidden">
+      <div class="modal">
+        <button data-modal-close class="close-btn" type="button">
+          <svg class="close-icon">
+            <use href="./images/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
