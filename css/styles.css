@@ -388,6 +388,7 @@ a {
 .clients-icon {
   width: 106px;
   height: 60px;
+  fill: currentColor;
 }
 .clients-link {
   width: 100%;
@@ -397,16 +398,16 @@ a {
   align-items: center;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  fill: #afb1b8;
+  color: #afb1b8;
 
-  transition-property: fill, border-color;
+  transition-property: color, border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-link:hover,
 .clients-link:focus {
   border-color: var(--accent-color);
-  fill: var(--accent-color);
+  color: var(--accent-color);
 }
 
 /*-------- FOOTER --------*/
@@ -513,7 +514,7 @@ a {
   transition: opacity 250ms, visibility 250ms;
 }
 .backdrop.is-hidden .modal {
-  transform: rotate(180deg);
+  transform: rotate(180deg) scale(3);
 }
 .modal {
   width: 500px;
@@ -523,8 +524,8 @@ a {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  transition: transform 1500ms;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 1250ms;
 }
 .close-btn {
   width: 30px;
@@ -533,12 +534,13 @@ a {
   background-color: var(--text-color-major-white);
   border: 1px solid rgba(0, 0, 0, 0.1);
 
+  display: flex;
+  align-items: center;
   position: absolute;
   top: 10px;
   right: 10px;
 }
 .close-icon {
-  display: block;
   width: 18px;
   height: 18px;
   fill: #000000;
